@@ -32,11 +32,11 @@
         <li><a class="dropdown-item text-center" href="#">C</a></li>
       </ul>
     </div>
-        <div class="text-center">
-          <button type="button" class="btn btn-success w-75 p-3 m-2" data-bs-toggle="modal" data-bs-target="#exampleModal"> Supino </button>
-          <button type="button" class="btn btn-success w-75 p-3 m-2" data-bs-toggle="modal" data-bs-target="#exampleModal"> Desenvolvimento </button>
-          <button type="button" class="btn btn-success w-75 p-3 m-2" data-bs-toggle="modal" data-bs-target="#exampleModal"> Pull-Down </button>
-          <button type="button" class="btn btn-success w-75 p-3 m-2" data-bs-toggle="modal" data-bs-target="#exampleModal"> Puxador Frontal </button>
+        <div class="text-center" id="divBotao">
+          <button type="button" class="btn btn-success w-75 p-3 m-2" id="testecor1" onclick="corButton()" data-bs-toggle="modal" data-bs-target="#exampleModal"> Supino </button>
+          <button type="button" class="btn btn-success w-75 p-3 m-2" id="testecor2" onclick="corButton()" data-bs-toggle="modal" data-bs-target="#exampleModal"> Desenvolvimento </button>
+          <button type="button" class="btn btn-success w-75 p-3 m-2" id="testecor3" onclick="corButton()" data-bs-toggle="modal" data-bs-target="#exampleModal"> Pull-Down </button>
+          <button type="button" class="btn btn-success w-75 p-3 m-2" id="testecor4" onclick="corButton()" data-bs-toggle="modal" data-bs-target="#exampleModal"> Puxador Frontal </button>
         </div>
       </div>
    </main>
@@ -83,11 +83,11 @@
         <h5 class="modal-title" id="exampleModalLabel">Iniciar Exercício</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <p>Exercício:</p>
+      <div class="modal-body text-center">
+        <img src="IMG/stick gym.png" alt="Stick in gym">
       </div>
       <div class="modal-footer" style="background-color: rgba(25,135,84,255);  color: rgba(185,232,184,255); justify-content: center;">
-          <button type="button" class="btn " style="background-color: rgba(12,145,10,255);color: white; " data-bs-dismiss="modal"  >Finalizar</button>
+          <button type="button" class="btn " id="mudarCor" style="background-color: rgba(12,145,10,255);color: white; " data-bs-dismiss="modal" onclick="alteraBotao()" >Finalizar</button>
       </div>
     </div>
   </div>
@@ -99,5 +99,27 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="views.js"></script>
+<script >
+
+  
+
+  function corButton() {
+
+      var el = document.getElementById('divBotao'); 
+      el.addEventListener('click', function(e) {
+        document.getElementById(e.target.id).style.background="grey";
+      });
+    
+  }
+
+    function alteraBotao(){
+
+      return ` <button type="button" class="btn " id="mudarCor" style="background-color: "grey";color: white; " data-bs-dismiss="modal" onclick="alteraBotao()" >Finalizar</button> `
+      
+      
+
+    }
+
+</script>
 </body>
 </html>
