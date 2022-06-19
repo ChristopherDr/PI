@@ -1,0 +1,15 @@
+    /* The Modal (background) */
+    .modal {
+    
+      }
+      
+      /* Modal Content/Box */
+      .modal-header {
+        background-color: rgba(25,135,84,255);
+        color: white;
+      }
+
+      .modal-body {
+        background-color: rgba(25,135,84,255);
+        color: white;
+      }
